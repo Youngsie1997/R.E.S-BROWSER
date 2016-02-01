@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Random Episode Selector",
+  "description": "This extension loads a random episode of a tv show on watchseries.to",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "RES.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*.thewatchseries.to/",
+    "https://ajax.googleapis.com/"
+  ],
+  "content_scripts":
+  [
+    {
+      "js":["jquery.js"],
+      "matches":[ "http://*/*", "https://*/*"]
+
+    }
+  ]
+}
